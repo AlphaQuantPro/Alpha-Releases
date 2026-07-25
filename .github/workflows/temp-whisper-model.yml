@@ -1,10 +1,10 @@
 name: Temporary Whisper Model Fetch
 
 on:
-  push:
-    paths:
-      - '.github/workflows/temp-whisper-model.yml'
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
