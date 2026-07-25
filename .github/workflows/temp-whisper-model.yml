@@ -13,16 +13,16 @@ jobs:
   fetch-model:
     runs-on: ubuntu-latest
     steps:
-      - name: Download base English Whisper model
+      - name: Download small English Whisper model
         run: |
           curl -L --fail --retry 3 --retry-delay 2 \
-            https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.en-q5_1.bin \
-            -o ggml-base.en-q5_1.bin
-          sha256sum ggml-base.en-q5_1.bin
+            https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.en-q5_1.bin \
+            -o ggml-small.en-q5_1.bin
+          sha256sum ggml-small.en-q5_1.bin
       - name: Upload model artifact
         uses: actions/upload-artifact@v4
         with:
-          name: whisper-model-base-en-q5_1
-          path: ggml-base.en-q5_1.bin
+          name: whisper-model-small-en-q5_1
+          path: ggml-small.en-q5_1.bin
           compression-level: 0
           retention-days: 1
