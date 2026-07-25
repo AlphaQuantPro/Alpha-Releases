@@ -1,1 +1,1 @@
-Temporary trigger file for offline transcription model and runtime retrieval.
+Temporary trigger file for higher-accuracy offline transcription model retrieval.
