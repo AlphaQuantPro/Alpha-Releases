@@ -13,16 +13,26 @@ jobs:
   fetch-model:
     runs-on: ubuntu-latest
     steps:
-      - name: Download tiny English Whisper model
+      - name: Download tiny English Whisper model and runtime source
         run: |
           curl -L --fail --retry 3 --retry-delay 2 \
             https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.en-q5_1.bin \
             -o ggml-tiny.en-q5_1.bin
-          sha256sum ggml-tiny.en-q5_1.bin
+          curl -L --fail --retry 3 --retry-delay 2 \
+            https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.8.2.tar.gz \
+            -o whisper.cpp-v1.8.2.tar.gz
+          sha256sum ggml-tiny.en-q5_1.bin whisper.cpp-v1.8.2.tar.gz
       - name: Upload model artifact
         uses: actions/upload-artifact@v4
         with:
           name: whisper-model-tiny-en-q5_1
           path: ggml-tiny.en-q5_1.bin
+          compression-level: 0
+          retention-days: 1
+      - name: Upload runtime source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: whisper-cpp-source-v1.8.2
+          path: whisper.cpp-v1.8.2.tar.gz
           compression-level: 0
           retention-days: 1
