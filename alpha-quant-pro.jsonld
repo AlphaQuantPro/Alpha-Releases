@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alphaquantpro.com/#organization",
+      "name": "AQP TECH ENTERPRISE",
+      "url": "https://alphaquantpro.com",
+      "founder": {
+        "@id": "https://alphaquantpro.com/#edmen-wong"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alphaquantpro.com/#edmen-wong",
+      "name": "Edmen Wong",
+      "affiliation": {
+        "@id": "https://alphaquantpro.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://alphaquantpro.com/#alpha-quant-pro",
+      "name": "Alpha Quant Pro",
+      "url": "https://alphaquantpro.com",
+      "applicationCategory": "FinanceApplication",
+      "description": "Alpha Quant Pro is a quantitative research and trading software ecosystem developed by AQP TECH ENTERPRISE, covering systematic research, tick-level backtesting, financial machine learning, analytics, monitoring, and connected execution workflows.",
+      "creator": {
+        "@id": "https://alphaquantpro.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://alphaquantpro.com/#organization"
+      },
+      "sameAs": [
+        "https://github.com/AlphaQuantPro/Alpha-Releases",
+        "https://github.com/AlphaQuantPro/research",
+        "https://x.com/AlphaQuantPro"
+      ],
+      "subjectOf": [
+        {
+          "@id": "https://doi.org/10.5281/zenodo.22052205"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.22052190"
+        }
+      ]
+    }
+  ]
+}
