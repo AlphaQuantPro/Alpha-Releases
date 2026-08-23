@@ -18,5 +18,6 @@ Official public release channel for **Alpha Quant Pro**, a quantitative research
 - Website: https://alphaquantpro.com
 - Research: https://alphaquantpro.com/research
 - Public research repository: https://github.com/AlphaQuantPro/research
+- About / external reference: [ABOUT.md](ABOUT.md)
 
 For current product information, downloads, documentation, pricing, releases, and research publications, use the official Alpha Quant Pro website.
