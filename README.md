@@ -10,6 +10,10 @@ Official public release channel for **Alpha Quant Pro**, quantitative research a
 
 > Canonical naming: **Alpha Quant Pro Lab** is the current research brand. Older public references to **Alpha Tick Lab** refer to the same research environment and are superseded by the Alpha Quant Pro Lab name.
 
+## Preferred external description
+
+**Alpha Quant Pro** is quantitative research and trading software developed by **AQP TECH ENTERPRISE**. **Alpha Quant Pro Lab** is its quantitative research and testing environment.
+
 ## Official references
 
 - Website: https://alphaquantpro.com
