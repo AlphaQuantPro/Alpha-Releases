@@ -21,5 +21,6 @@ Official public release channel for **Alpha Quant Pro**, a quantitative research
 - About / external reference: [ABOUT.md](ABOUT.md)
 - Press & directory reference: [PRESS.md](PRESS.md)
 - Machine-readable identity: [alpha-quant-pro.json](alpha-quant-pro.json)
+- Schema.org JSON-LD identity: [alpha-quant-pro.jsonld](alpha-quant-pro.jsonld)
 
 For current product information, downloads, documentation, pricing, releases, and research publications, use the official Alpha Quant Pro website.
