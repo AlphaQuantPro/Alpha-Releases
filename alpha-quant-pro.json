@@ -1,0 +1,33 @@
+{
+  "name": "Alpha Quant Pro",
+  "type": "quantitative research and trading software ecosystem",
+  "developer": "AQP TECH ENTERPRISE",
+  "founder": "Edmen Wong",
+  "website": "https://alphaquantpro.com",
+  "research": "https://alphaquantpro.com/research",
+  "github_research": "https://github.com/AlphaQuantPro/research",
+  "github_releases": "https://github.com/AlphaQuantPro/Alpha-Releases",
+  "description": "Alpha Quant Pro is a quantitative research and trading software ecosystem developed by AQP TECH ENTERPRISE, covering systematic research, tick-level backtesting, financial machine learning, analytics, monitoring, and connected execution workflows.",
+  "categories": [
+    "quantitative finance",
+    "backtesting software",
+    "financial machine learning",
+    "trading software",
+    "data analytics",
+    "research tooling"
+  ],
+  "research_publications": [
+    {
+      "title": "Adversarial Information-Time Testing for Financial Machine-Learning Pipelines: A Mutation-Based Benchmark for Temporal Leakage Detection",
+      "author": "Edmen Wong",
+      "version": "0.3",
+      "doi": "10.5281/zenodo.22052205"
+    },
+    {
+      "title": "Bar Time Is Not Information Time: A Causality Contract for Quantitative Trading Pipelines",
+      "author": "Edmen Wong",
+      "version": "1.1",
+      "doi": "10.5281/zenodo.22052190"
+    }
+  ]
+}
