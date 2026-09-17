@@ -1,0 +1,29 @@
+name: Relay v3.5.10 installer
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  relay:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download, reassemble, and verify installer
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://cuhkpclkiauqfzrhrzde.supabase.co/storage/v1/object/public/release-staging/v3.5.10"
+          for i in 00 01 02 03 04 05; do
+            curl --fail --location --retry 8 --retry-all-errors --connect-timeout 20 --max-time 300 "$base/part${i}.bin" -o "part${i}.bin"
+          done
+          cat part00.bin part01.bin part02.bin part03.bin part04.bin part05.bin > AlphaQuantPro_Setup_3_5_10.exe
+          test "$(stat -c%s AlphaQuantPro_Setup_3_5_10.exe)" = "269228273"
+          echo "e40e8a3d9a1ea92542550eb50f0a8a4457fec4cfc91d78872356d5de8be6dcee  AlphaQuantPro_Setup_3_5_10.exe" | sha256sum -c -
+      - name: Upload installer and publish release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload v3.5.10 AlphaQuantPro_Setup_3_5_10.exe --clobber --repo "$GITHUB_REPOSITORY"
+          gh release edit v3.5.10 --draft=false --latest --repo "$GITHUB_REPOSITORY"
+          gh release view v3.5.10 --repo "$GITHUB_REPOSITORY" --json tagName,isDraft,publishedAt,assets
